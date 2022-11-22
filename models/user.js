@@ -13,6 +13,7 @@ const userSchema = new Schema({
   lvlprogress: Array,
   ingredients: Array,
   recipes: Array,
+  tutprogress: Array,
 }, {timestamps: true});
 
 const User = mongoose.model('User', userSchema);

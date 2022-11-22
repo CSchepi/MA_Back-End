@@ -14,6 +14,7 @@ router.get('/', function(req, res, next) {
     lvlprogress: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     ingredients: [],
     recipes: [],
+    tutprogress:[0,0,0,0,0,0,0]
   });
 
   user.save()

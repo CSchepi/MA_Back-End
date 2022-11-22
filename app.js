@@ -20,6 +20,8 @@ const getIngredientswhileCrafting = require('./routes/getIngredientswhileCraftin
 const getCraftedRecipe = require('./routes/getCraftedRecipe');
 const updateIngredient = require('./routes/updateIngredient');
 const updateRecipe = require('./routes/updateRecipe');
+const getTutprogress = require('./routes/getTutprogress');
+const updateTutprogress = require('./routes/updateTutprogress');
 
 
 //MongoDB requirements
@@ -60,6 +62,8 @@ app.use('/getIngredientswhileCrafting', getIngredientswhileCrafting);
 app.use('/getCraftedRecipe', getCraftedRecipe);
 app.use('/updateIngredient', updateIngredient);
 app.use('/updateRecipe', updateRecipe);
+app.use('/getTutprogress', getTutprogress);
+app.use('/updateTutprogress', updateTutprogress);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

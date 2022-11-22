@@ -5,7 +5,7 @@ const User =  require('../models/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    let new_tutprogress = req.query.addI;
+    let new_tutprogress = req.query.new_tutprogress;
     User.findOneAndUpdate({_id: req.query.id}, {tutprogress: new_tutprogress}, {new: true})
     .then((result)=>{
       res.send(result);

@@ -6,6 +6,7 @@ const Ingredient =  require('../models/ingredient');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   let filter = req.query.filternum;
+  //returns all ingredients or if a number is given, the ingredient with the according number
   if(filter != undefined && filter != ""){
     let filterarray = filter.split('_');
     console.log(filterarray);

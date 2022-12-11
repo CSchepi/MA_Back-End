@@ -8,7 +8,8 @@ router.get('/', function(req, res, next) {
   let filter = req.query.using;
   let returnarray = [];
   let inputingredients = null;
-
+  
+  //Working on a specific user (by id): based on given ingredients, all recipes that can be crafted and are not owned are selected. Of these, all the ingredients are selected and returened in one array
   User.findById(req.query.id)
   .then((profile)=>{
     let knownrecipes = profile["recipes"];

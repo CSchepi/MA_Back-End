@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
     let carbonmedal = req.query.cm;
     let update = {carbonmedal: carbonmedal, watermedal: watermedal}
     
+    //updates the watermedal and carbonmedal of one recipe (by id) 
     Recipe.findOneAndUpdate({_id: req.query.id}, update, {new: true})
     .then((result)=>{
       res.send(result);

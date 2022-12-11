@@ -11,10 +11,10 @@ const recipeSchema = new Schema({
     type: Number, 
     required: true
   },
-  carbonpoints: Number,
-  carbonmedal: Number,
-  waterpoints: Number,
-  watermedal: Number,
+  carbonpoints: Number, //points being the value in gramms
+  carbonmedal: Number, //medals being the abstraction (0.5-5)
+  waterpoints: Number, //points being in the value in lieters
+  watermedal: Number, //medals being the abstracition (0.5-5)
   backtext: String,
   cardidentifier: String,
   

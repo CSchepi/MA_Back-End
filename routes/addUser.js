@@ -6,7 +6,7 @@ const User =  require('../models/user');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  //Create new Ingredient
+  //Create new User
   console.log(req.query.pw);
   const user = new User({
     name: req.query.name,

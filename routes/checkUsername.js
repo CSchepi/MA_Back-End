@@ -5,7 +5,8 @@ const User =  require('../models/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    User.find({'name':req.query.name})
+  //find user acording to quary and return if it exists or not  
+  User.find({'name':req.query.name})
     .then((result)=>{
       if(result.length>0){
         res.send("exist");

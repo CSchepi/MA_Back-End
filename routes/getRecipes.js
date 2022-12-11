@@ -5,7 +5,9 @@ const Recipe =  require('../models/recipe');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+
   let filter = req.query.filternum;
+  //returns all recipes or if a number is given, the recipe with the according number
   if(filter != undefined && filter != ""){
     let filterarray = filter.split('_');
     console.log(filterarray);

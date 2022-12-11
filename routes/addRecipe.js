@@ -6,7 +6,7 @@ const Recipe =  require('../models/recipe');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  //Create new Ingredient
+  //Create new Recipe
   const recipe = new Recipe({
     name: req.query.name,
     imgurl: req.query.imgurl,

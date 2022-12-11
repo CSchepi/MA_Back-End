@@ -7,14 +7,14 @@ const User =  require('../models/user');
 router.get('/', function(req, res, next) {
     let new_ingredient = req.query.addI;
     let new_recipe = req.query.addR;
-    
+    //updates ingredients or recipes or levelprogress of a user (by id)
     let Level_Prorgress = null;
     if(req.query.LP != undefined){
       Level_Prorgress =req.query.LP.split('_');
     }
 
     let update = null;
-    //update Ingredients
+    //creating an update property based on the given inputs 
     if(new_ingredient!=undefined&& new_ingredient!=""){
       update = {$push: {ingredients: new_ingredient}}
     }

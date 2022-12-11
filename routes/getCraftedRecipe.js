@@ -7,24 +7,7 @@ const User =  require('../models/user');
 router.get('/', function(req, res, next) {
   let filter = req.query.using;
   let returnarray = [];
-  // if(filter != undefined && filter != ""){
-  //   let inputingredients = filter.split('_');
-  //   Recipe.find({ingredientarray: { $all: inputingredients }})
-  //   .then((result)=>{
-  //     let possibilities = result;
-  //     for(let i = 0; i< possibilities.length;i++){
-  //       returnarray.push(possibilities[i]["number"])
-  //     }
-  //     res.send(returnarray);
-  //   })
-  //   .catch((err)=>{
-  //   })
-  // }
-  // else{
-  //   let allingredients = Array.from({length: 100}, (_, i) => i + 1);
-  //   res.send(allingredients);
-  // }
-
+  //returns an array based on an user id with recipes that can be crafted based on the inputed ingredients and is not alreay owned by the player
   User.findById(req.query.id)
   .then((profile)=>{
     let knownrecipes = profile["recipes"];
